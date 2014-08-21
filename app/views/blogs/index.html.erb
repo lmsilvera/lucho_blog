@@ -6,6 +6,9 @@
       <h1><%= link_to blog['title'], blog_path(blog) %></h1>
       <p><%= blog['body'] %></p>
       <i>Autor: <%= blog['author'] %></i>
+      <br>
+      <%= link_to 'Editar', edit_blog_path(blog) %> | 
+      <%= link_to 'Eliminar', blog, method: :delete, data: { confirm: '¿Esta seguro?' } %>
     </div>
   <% end %>
 </table>

@@ -9,4 +9,11 @@
 }
 body{
   font-family: Helvetica;
+  color: #303030;
+}
+a{
+  color: #303030;
+  &:visited{
+    color: #303030;
+  }
 }

@@ -12,6 +12,9 @@ class BlogsController < ApplicationController
   def show    
   end
 
+  def edit    
+  end
+
   def create
     @blog = Blog.new(blog_params)
     respond_to do |format|
