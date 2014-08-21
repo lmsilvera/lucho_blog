@@ -36,8 +36,6 @@ class BlogsController < ApplicationController
     end
   end
 
-  # DELETE /blogs/1
-  # DELETE /blogs/1.json
   def destroy
     @blog.destroy
     respond_to do |format|
