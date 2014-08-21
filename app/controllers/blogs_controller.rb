@@ -26,6 +26,25 @@ class BlogsController < ApplicationController
     end
   end
 
+  def update
+    respond_to do |format|
+      if @blog.update(blog_params)
+        format.html { redirect_to @blog, notice: 'El Blog ha sido editado.' }
+      else
+        format.html { render :edit }
+      end
+    end
+  end
+
+  # DELETE /blogs/1
+  # DELETE /blogs/1.json
+  def destroy
+    @blog.destroy
+    respond_to do |format|
+      format.html { redirect_to blogs_url, notice: 'El Blog ha sido eliminado.' }
+    end
+  end
+
   private
     def set_blog
       @blog = Blog.find(params[:id])
