@@ -24,12 +24,11 @@ class BlogsController < ApplicationController
   end
 
   private
-  private
     def set_blog
       @blog = Blog.find(params[:id])
     end
 
     def blog_params
-      params.require(:blog).permit(:modelo, :anio, :descripcion)
+      params.require(:blog).permit(:title, :body, :author)
     end
 end
