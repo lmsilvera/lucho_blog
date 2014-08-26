@@ -9,7 +9,7 @@ class BlogsController < ApplicationController
     @blog = Blog.new
   end
 
-  def show    
+  def show
   end
 
   def edit    

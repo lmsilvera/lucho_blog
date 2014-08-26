@@ -1,0 +1,25 @@
+// Place all the styles related to the Comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.comment{
+  background-color: white;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5px;  
+  width: calc(100% - 10px);
+  margin-top: 5px;
+}
+textarea, input[type=text]{
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 5px;
+  width: calc(100% - 10px);
+}
+textarea{
+  resize: vertical;
+}
+input[type=text]{
+  display: inline-block;
+}

@@ -1,16 +1,15 @@
-<h1>--Lista de entradas--</h1>
-<table>
+<div class="blog">
+  <h1>Lista de entradas</h1>
   <% @blogs.each do |blog| %>
-    <br>
-    <div class="entrada">
+    <div class="comment">
       <h1><%= link_to blog['title'], blog_path(blog) %></h1>
       <p><%= blog['body'] %></p>
       <i>Autor: <%= blog['author'] %></i>
-      <br>
+      <p>Comentarios: <%= blog.comments.size %></p>
       <%= link_to 'Editar', edit_blog_path(blog) %> | 
       <%= link_to 'Eliminar', blog, method: :delete, data: { confirm: '¿Esta seguro?' } %>
     </div>
   <% end %>
-</table>
-<br>
-<%= link_to 'Nueva entrada', new_blog_path %>
+  <br>
+  <%= link_to 'Nueva entrada', new_blog_path %>
+</div>
