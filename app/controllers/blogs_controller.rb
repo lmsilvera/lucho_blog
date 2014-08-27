@@ -12,11 +12,12 @@ class BlogsController < ApplicationController
   def show
   end
 
-  def edit    
+  def edit
   end
 
   def create
     @blog = Blog.new(blog_params)
+    @blog.author = current_user.email
     respond_to do |format|
       if @blog.save
         format.html { redirect_to @blog, notice: 'El Blog ha sido creado.' }
