@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get '/', to: redirect('/blogs')
   resources :blogs do
     resources :comments

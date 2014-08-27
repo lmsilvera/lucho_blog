@@ -1,3 +1,4 @@
+
 <div class="blog">
   <h1>Lista de entradas</h1>
   <% @blogs.each do |blog| %>
@@ -6,10 +7,10 @@
       <p><%= blog['body'] %></p>
       <i>Autor: <%= blog['author'] %></i>
       <p>Comentarios: <%= blog.comments.size %></p>
-      <%= link_to 'Editar', edit_blog_path(blog) %> | 
-      <%= link_to 'Eliminar', blog, method: :delete, data: { confirm: '¿Esta seguro?' } %>
+      <%= link_to 'Editar', edit_blog_path(blog) if user_signed_in? %>  
+      <%= link_to 'Eliminar', blog, method: :delete, data: { confirm: '¿Esta seguro?' } if user_signed_in? %>
     </div>
   <% end %>
   <br>
-  <%= link_to 'Nueva entrada', new_blog_path %>
+  <%= link_to 'Nueva entrada', new_blog_path if user_signed_in? %>
 </div>
