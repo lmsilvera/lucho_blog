@@ -1,0 +1,91 @@
+/* line 5, /Users/koombea/Desktop/lucho_blog/app/assets/stylesheets/blogs.css.scss */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+/* line 10, /Users/koombea/Desktop/lucho_blog/app/assets/stylesheets/blogs.css.scss */
+html {
+  background-color: #eee;
+}
+
+/* line 13, /Users/koombea/Desktop/lucho_blog/app/assets/stylesheets/blogs.css.scss */
+body {
+  font-family: Avenir;
+  color: #303030;
+  font-size: 120%;
+}
+
+/* line 18, /Users/koombea/Desktop/lucho_blog/app/assets/stylesheets/blogs.css.scss */
+a {
+  color: #303030;
+  text-decoration: none;
+}
+/* line 21, /Users/koombea/Desktop/lucho_blog/app/assets/stylesheets/blogs.css.scss */
+a:visited {
+  color: #303030;
+}
+/* line 24, /Users/koombea/Desktop/lucho_blog/app/assets/stylesheets/blogs.css.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 28, /Users/koombea/Desktop/lucho_blog/app/assets/stylesheets/blogs.css.scss */
+.blog {
+  background-color: #f5f5f5;
+  padding: 5px;
+  border-radius: 5px;
+  width: calc(100% - 20px);
+  max-width: 500px;
+  margin: auto;
+}
+/* line 5, /Users/koombea/Desktop/lucho_blog/app/assets/stylesheets/comments.css.scss */
+.comment {
+  background-color: white;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5px;
+  width: calc(100% - 10px);
+  margin-top: 5px;
+}
+
+/* line 13, /Users/koombea/Desktop/lucho_blog/app/assets/stylesheets/comments.css.scss */
+textarea, input[type=text] {
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 5px;
+  width: calc(100% - 10px);
+}
+
+/* line 20, /Users/koombea/Desktop/lucho_blog/app/assets/stylesheets/comments.css.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 23, /Users/koombea/Desktop/lucho_blog/app/assets/stylesheets/comments.css.scss */
+input[type=text] {
+  display: inline-block;
+}
+
+/* line 26, /Users/koombea/Desktop/lucho_blog/app/assets/stylesheets/comments.css.scss */
+.nav {
+  text-align: right;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
