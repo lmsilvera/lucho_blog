@@ -14,8 +14,8 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
-  config.action_mailer.default_url_options = { :host => 'lucho-blog.herokuapp.com/' }
- ActionMailer::Base.delivery_method = :smtp
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
       :address        => 'smtp.sendgrid.net',
       :port           => '587',
