@@ -14,20 +14,16 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
-  config.action_mailer.default_url_options = { :host => 'lucho-blog.herokuapp.com' }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = false
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default :charset => "utf-8"
-
-
+  config.action_mailer.default_url_options = { :host => 'lucho-blog.herokuapp.com/' }
+ ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
-    :address => "smtp.sendgrid.net",
-    :port => 587,
-    :authentication => :plain,
-    :domain => 'heroku.com',
-    :user_name => 'app28983827@heroku.com',
-    :password => 'v59c4uth'
+      :address        => 'smtp.sendgrid.net',
+      :port           => '587',
+      :authentication => :plain,
+      :user_name      => ENV['app28983827@heroku.com'],
+      :password       => ENV['v59c4uth'],
+      :domain         => 'heroku.com',
+      :enable_starttls_auto => true
   }
 
   # Print deprecation notices to the Rails logger.
