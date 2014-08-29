@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.4'
 gem 'devise'
 gem 'pg'
+gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
