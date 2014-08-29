@@ -5,12 +5,12 @@
     <div class="comment">
       <h3><%= comment.author.strip.to_s.length > 0 ? comment.author : "Anónimo" %></h3>
       <p><%= comment.comment %></p>
-      <%= link_to 'Editar', edit_blog_comment_path(:blog_id => @blog, :id => comment) if user_signed_in? && current_user.email == comment.author %>
-      <%= link_to 'Eliminar', blog_comment_path(:blog_id => @blog, :id => comment), method: :delete, data: { confirm: '¿Esta seguro?' } if user_signed_in? && current_user.email == comment.author %>
+      <%= link_to 'Editar', edit_blog_comment_path(:blog_id => @blog, :id => comment) if user_signed_in? && (current_user.email == comment.author || current_user.author == comment.author) %>
+      <%= link_to 'Eliminar', blog_comment_path(:blog_id => @blog, :id => comment), method: :delete, data: { confirm: '¿Esta seguro?' } if user_signed_in? && (current_user.email == comment.author || current_user.author == comment.author) %>
     </div>
   <% end %>
   <br>
   <%= link_to 'Nuevo comentario', new_blog_comment_path(@blog) if user_signed_in? %>
   <br>
-  <%= link_to 'Editar', edit_blog_path(@blog) if user_signed_in? && current_user.email == @blog.author %>
+  <%= link_to 'Editar', edit_blog_path(@blog) if user_signed_in? && (current_user.email == @blog.author || current_user.author == @blog.author) %>
   <%= link_to 'Volver', blogs_path %>

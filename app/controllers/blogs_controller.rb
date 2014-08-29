@@ -17,7 +17,7 @@ class BlogsController < ApplicationController
 
   def create
     @blog = Blog.new(blog_params)
-    @blog.author = current_user.author
+    @blog.author = current_user.author || current_user.email
     respond_to do |format|
       if @blog.save
         format.html { redirect_to @blog, notice: 'El Blog ha sido creado.' }
