@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = @blog.comments.new(comment_params)
-    @comment.author = current_user.email
+    @comment.author = current_user.author
     respond_to do |format|
       if @comment.save
         format.html { redirect_to blog_path(@blog), notice: 'El comentario ha sido creado.' }
